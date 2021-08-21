@@ -1,0 +1,28 @@
+# 接收端: 负责将请求转发给转发端
+api:
+  # 接收端配置
+  receiver:
+    # 是否启用该接收端，默认为 false
+    # 在 false 的情况下，下面的配置全部不生效
+    enable: true
+    # 自定义请求头中的 User-Agent 字段
+    # 如果留空则不设置任何 User-Agent
+    userAgent:
+    # 接收端凭据
+    credentials:
+      # 该接收端 ID (任意长度)
+      id: 9e706b500c85
+      # 该接收端预共享密钥 (任意长度)
+      security-key: a2e3ca51d8666e0c0409b
+    api:
+      - name: defaultGroup # 该 api 的分组名字
+        # 该分组下的 url 转发到哪个节点
+        forwarder: http://127.0.0.1:9091/apiServer
+        # 需要转发的路径
+        urls:
+          - host: https://www.bing.com # 该地址请求转发到的目标主机
+            url: /** # 匹配的 URL 路径，表示访问接收端时进行转发的 URL
+            url-encode: false # 是否需要 urlEncode，默认需要
+            method: # 可接受的请求方式
+              - GET
+              - POST

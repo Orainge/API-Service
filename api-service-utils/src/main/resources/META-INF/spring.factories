@@ -1,0 +1,9 @@
+# ×Ô¶¯×°Åä
+org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
+com.orainge.tools.apiservice.handler.HttpExceptionHandler,\
+com.orainge.tools.apiservice.controller.HttpErrorController,\
+com.orainge.tools.apiservice.util.encryption.AESEncryptionUtil,\
+com.orainge.tools.apiservice.config.RestTemplateConfig,\
+com.orainge.tools.apiservice.util.HttpClient,\
+com.orainge.tools.apiservice.util.JSONUtil,\
+com.orainge.tools.apiservice.util.encryption.TOTPUtilImpl

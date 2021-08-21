@@ -1,0 +1,5 @@
+# http 客户端配置
+http-client:
+  connect-timeout: 20 # 连接超时超时
+  read-timeout: 120 # 读取数据超时时间
+  show-log: false # 使用自定义的客户端是否输出请求结果
